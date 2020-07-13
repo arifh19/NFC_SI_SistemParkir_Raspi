@@ -18,7 +18,7 @@ class ParkirController extends Controller
     {
         $i=1;
         $parkirs = Parkir::all()->sortByDesc('created_at');
-        return view('Parkir')->with(compact('parkirs','i'));
+        return view('parkir')->with(compact('parkirs','i'));
     }
 
     /**

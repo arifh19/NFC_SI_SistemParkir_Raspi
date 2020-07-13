@@ -20,6 +20,8 @@ class CreateParkirsTable extends Migration
             $table->string('clock_in');
             $table->string('clock_out')->nullable();
             $table->timestamps();
+            $table->foreign('kendaraan_id')->references('id')->on('kendaraans')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
